@@ -1,2 +1,21 @@
-%h2 Paypal Payment Notification
+%p#notice= notice
 
+%p
+  %b Params:
+  = @paypal_payment_notification.params
+%p
+  %b Status:
+  = @paypal_payment_notification.status
+%p
+  %b Paypal transaction:
+  = @paypal_payment_notification.paypal_transaction_id
+%p
+  %b Invoice:
+  = @paypal_payment_notification.invoice
+%p
+  %b Raw post:
+  = @paypal_payment_notification.raw_post
+
+= link_to 'Edit', edit_paypal_payment_notification_path(@paypal_payment_notification)
+\|
+= link_to 'Back', paypal_payment_notifications_path

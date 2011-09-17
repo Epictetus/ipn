@@ -1,11 +1,27 @@
+%h1 Listing paypal_payment_notifications
+
 %table
-  %thead
-    %th id
-    %th created_at
-    %th actions
-  %tbody
-    - @paypal_payment_notifications.each do |paypal_payment_notification|
-      %tr
-        %td= paypal_payment_notification.id
-        %td= paypal_payment_notification.created_at
-        %td= link_to 'Show', paypal_payment_notification_path(paypal_payment_notification)
+  %tr
+    %th Params
+    %th Status
+    %th Paypal transaction
+    %th Invoice
+    %th Raw post
+    %th
+    %th
+    %th
+
+  - @paypal_payment_notifications.each do |paypal_payment_notification|
+    %tr
+      %td= paypal_payment_notification.params
+      %td= paypal_payment_notification.status
+      %td= paypal_payment_notification.paypal_transaction_id
+      %td= paypal_payment_notification.invoice
+      %td= paypal_payment_notification.raw_post
+      %td= link_to 'Show', paypal_payment_notification
+      %td= link_to 'Edit', edit_paypal_payment_notification_path(paypal_payment_notification)
+      %td= link_to 'Destroy', paypal_payment_notification, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Paypal payment notification', new_paypal_payment_notification_path

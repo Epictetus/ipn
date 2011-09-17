@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110917224444) do
+ActiveRecord::Schema.define(:version => 20110917232139) do
 
   create_table "paypal_payment_notifications", :force => true do |t|
     t.text     "params"
