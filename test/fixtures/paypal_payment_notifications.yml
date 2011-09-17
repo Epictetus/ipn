@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  params: MyText
+  status: MyString
+  paypal_transaction_id: MyString
+  invoice: MyString
+  raw_post: MyText
+
+two:
+  params: MyText
+  status: MyString
+  paypal_transaction_id: MyString
+  invoice: MyString
+  raw_post: MyText

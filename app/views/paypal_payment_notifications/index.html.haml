@@ -1,0 +1,11 @@
+%table
+  %thead
+    %th id
+    %th created_at
+    %th actions
+  %tbody
+    - @paypal_payment_notifications.each do |paypal_payment_notification|
+      %tr
+        %td= paypal_payment_notification.id
+        %td= paypal_payment_notification.created_at
+        %td= link_to 'Show', paypal_payment_notification_path(paypal_payment_notification)
