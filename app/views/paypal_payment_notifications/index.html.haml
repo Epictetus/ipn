@@ -7,9 +7,7 @@
     %th Paypal transaction
     %th Invoice
     %th Raw post
-    %th
-    %th
-    %th
+    %th Actions
 
   - @paypal_payment_notifications.each do |paypal_payment_notification|
     %tr
@@ -19,9 +17,3 @@
       %td= paypal_payment_notification.invoice
       %td= paypal_payment_notification.raw_post
       %td= link_to 'Show', paypal_payment_notification
-      %td= link_to 'Edit', edit_paypal_payment_notification_path(paypal_payment_notification)
-      %td= link_to 'Destroy', paypal_payment_notification, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Paypal payment notification', new_paypal_payment_notification_path
